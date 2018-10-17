@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>组件通信，父——子</title>
+</head>
+<body>
+    <div id="app">
+       <love age="16138"></love>
+    </div>
+    <div id="user">
+        <user username="whh"></user>
+    </div>
+</body>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript">
+    Vue.component('love',{
+        template:'<button @click="onclick">666</button>',
+        props:['age'],//组件通信传参属性，['参数']
+        methods:{
+            onclick:function(){
+                alert(this.age);
+            }
+        }
+    })
+
+     var app = new Vue({
+        el:'#app',
+     })
+
+
+     Vue.component('user',{   //动态显示超链接
+        template:'<a :href="\'/user/\'+username">{{username}}</a>',
+        props:['username'],
+        methods:{}
+    })
+     var user = new Vue({
+        el:'user',
+     })
+</script>
+</html>

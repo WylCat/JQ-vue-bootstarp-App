@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>权限管理</title>
+</head>
+<body>
+<div id="app">
+       <div>
+           <router-link to='/index'>首页</router-link><!--这个标签用于链接各个页面，to跟的属性为对象定义的属性-->
+
+           <router-link to='/type1'>登入</router-link>
+            <router-link to='/type2'>管理</router-link>
+       </div>
+       <div>
+           <router-view></router-view>
+       </div>
+   </div>
+</body>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript" src="vue-router.js"></script>
+<script type="text/javascript">
+   var supper=[
+        {
+            path:'/index',
+            component:{
+                template:`
+                 <div>
+                     主页
+                 </div>
+                `
+            }
+        },
+        {
+            path:'/type1',
+           component:{
+                template:`
+                 <div>
+                     登入
+                 </div>
+                `
+            }
+        },
+        {
+            path:'/type2',
+            meta:{//自定义属性。用于权限
+                yes:true,
+            },
+           component:{
+                template:`
+                 <div>
+                     权限管理
+                     <router-link to="more" append>6666</router-link>
+                     <router-view></router-view>
+                 </div>
+                `
+            },
+            children:[//子路由,嵌套在组件页面里
+                {
+              path:'more',//配置路径，由HTML里的router-link标签的to属性接受
+             component:{//创建组件及配置组件
+              template:`
+            <div>
+                <h1>dskjdks</h1>
+            </div>
+            `,
+           },
+          },
+            ],
+        }
+   ];
+
+
+   var router = new VueRouter({
+       routes:supper,
+   });
+
+   // router.beforeEach(function(to,from,next){//组件访问之前执行此方法
+   //         var loggon = false;//true
+   //         if(!loggon&&to.path=='/type2'){//用户未登入访问权限
+   //            next('/type1');
+   //         }else{
+   //          next();
+   //         }
+   // });
+   // 以上方法不够严谨
+    router.beforeEach(function(to,from,next){//组件访问之前执行此方法
+           var loggon = false;//true
+           if (!loggon && to.matched.some(function (item) {//to.matched匹配所有路由，将含有/type的路径输出
+            return item.meta.yes;
+            })){//用户未登入访问权限
+              next('/type1');
+           }else{
+            next();
+        }
+   });
+    router.afterEach(function(to,from){//组件访问之后执行此方法
+
+     console.log(to,from);
+   })
+   new Vue({
+    el:"#app",
+    router:router,//将router属性与上面router方法，嵌套
+   });
+</script>
+</html>

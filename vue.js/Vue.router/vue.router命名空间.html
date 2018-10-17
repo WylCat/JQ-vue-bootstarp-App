@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>命名空间</title>
+</head>
+<body>
+  <div id="app">
+       <div>
+           <router-link to='/index'>首页</router-link><!--这个标签用于链接各个页面，to跟的属性为对象定义的属性-->
+           <router-link to='/type1'>关于我们</router-link>
+           <router-link to='/type2'>谁最帅？</router-link>
+       </div>
+       <div>
+           <router-view name="about"></router-view><!--视图渲染标签，name属性可指定渲染组件，渲染各个页面-->
+           <router-view name="about1"></router-view>
+           <router-view name="user"></router-view>
+           <router-view name="user1"></router-view>
+           <router-view></router-view>
+       </div>
+   </div>
+</body>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript" src="vue-router.js"></script>
+<script type="text/javascript">
+   var some=[
+        {
+            path:'/index',
+            component:{
+                template:`
+                 <div>
+                     主页
+                 </div>
+                `
+            }
+        },
+        {
+            path:'/type1',
+            components:{//不同的name对应不同的组件，若有多个componet为复数
+               about:{//router-view的name属性，
+                template:`
+                    <div>
+                        关于我们上半部
+                    </div>
+                `,
+               },
+               about1:{
+                template:`
+                    <div>
+                        关于我们下半部
+                    </div>
+                `,
+               }
+            }
+        },
+        {
+            path:'/type2',
+            components:{
+               user:{
+                template:`
+                    <div>
+                        帅帅帅上半部
+                    </div>
+                `,
+               },
+               user1:{
+                template:`
+                    <div>
+                        帅帅帅下半部
+                    </div>
+                `,
+               }
+            }
+        }
+   ];
+   var router = new VueRouter({
+       routes:some,
+   });
+   new Vue({
+    el:"#app",
+    router:router,//将router属性与上面router方法，嵌套
+   });
+</script>
+</html>

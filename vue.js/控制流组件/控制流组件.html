@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>控制流组件</title>
+</head>
+<body>
+<div id="app">
+   <div v-if="user=='admin'">
+       管理员你好
+   </div>
+   <div v-else-if="user=='hr'">
+       待查看简历。。。。
+   </div>
+   <div v-else>
+       你没有访问权限
+   </div>
+</div>
+</body>
+<script src="vue.js"></script>
+<script src="main.js"></script>
+</html>

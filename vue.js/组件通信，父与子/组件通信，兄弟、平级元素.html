@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>平级通信</title>
+</head>
+<body>
+  <div id="app">
+      <yang></yang>
+      <hao></hao>
+  </div>
+</body>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript">
+
+  var Event = new Vue();//事件调度器，用于监听事件
+
+   Vue.component('yang',{
+    template:'<div>我说:<input v-model="y_said" @keyup="listen"></input></div>',
+    methods:{
+        listen:function(){
+            Event.$emit('text',this.y_said);//$emit('事件名',参数)
+        }
+    },
+      data:function(){
+          return {
+                  y_said:'',
+          }
+      }
+   })
+
+   Vue.component('hao',{
+      template:'<div>浩说:{{said}}</div>',
+      mounted:function(){//组件初始化/加载完成,执行函数
+        var me = this;
+           Event.$on('text',function(data){//$on('事件名'function(参){执行命令})绑定函数
+             me.said = data;
+           });
+      },
+      data:function(){
+           return {
+             said:'',
+           }
+      }
+   })
+
+ new Vue({
+    el:'#app',
+ })
+</script>
+</html>

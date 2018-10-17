@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>vue-router</title>
+</head>
+<body>
+   <div id="app">
+       <div>
+           <router-link to='/'>首页</router-link><!--这个标签用于链接各个页面，to跟的属性为对象定义的属性-->
+           <router-link to='/about'>关于我们</router-link>
+           <router-link to='/user/鹿哥'>谁最帅？</router-link>
+       </div>
+       <div>
+           <router-view></router-view><!--视图渲染标签，渲染各个页面-->
+       </div>
+   </div>
+</body>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript" src="vue-router.js"></script>
+<script type="text/javascript">
+   var some= [ //路由 创建router区域对象，每个页面配置都在单独的对象里
+          {
+            path:'/',//配置路径，由HTML里的router-link标签的to属性接受
+           component:{//创建组件及配置组件
+            template:`
+            <div>
+                <h1>首页</h1>
+            </div>
+            `,
+           },
+          },//第二个页面，由对象隔开
+          {
+            path:'/about',//配置路径，由HTML里的router-link标签的to属性接受
+           component:{//创建组件及配置组件
+            template:`
+            <div>
+                <h1>关于我们</h1>
+            </div>
+            `,
+           },
+          },
+          {
+            path:'/user/:name',//配置路径，由HTML里的router-link标签的to属性接受
+           component:{//创建组件及配置组件
+            template:`
+            <div>
+                <div>我叫：{{$route.params.name}}</div>
+                <router-link to="more" append>详细信息</router-link>
+                //:to="'/user/'+$route.params.name +'/more'"
+                <router-view></router-view>
+            </div>
+            `,
+           },
+            children:[//子路由,嵌套在组件页面里
+                {
+              path:'more',//配置路径，由HTML里的router-link标签的to属性接受
+             component:{//创建组件及配置组件
+              template:`
+            <div>
+                <h1>用户{{$route.params.name}}的详细信息</h1>
+            </div>
+            `,
+           },
+          },
+            ],
+          },
+   ];
+
+   var router = new VueRouter({//调用router.js方法,配置组件
+        routes:some,//routes:定义的router区间
+    });
+
+   new Vue({
+    el:"#app",
+    router:router,//将router属性与上面router方法，嵌套
+   });
+</script>
+</html>

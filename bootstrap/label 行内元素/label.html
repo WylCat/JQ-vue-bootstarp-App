@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>label</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<style type="text/css">
+    body{
+        max-width:500px;
+        margin:20px auto;
+    }
+</style>
+<body>
+    <h1>hello,world <span class="badge">50+</span></h1>
+    <!-- badge 状态，消息 行内元素 -->
+    <p>
+       <span class="label label-success">神秘</span>
+       <!-- label 行内标签块 -->
+       <span class="label label-warning">未知</span>
+       <span class="label label-info">伟大</span>
+       <span class="label label-danger">无敌</span>
+    </p>
+
+    <button class="btn btn-primary">赞<span class="badge">20</span></button>
+    <!-- 此时 badge里的内容会根据父标签的颜色改变 -->
+    <div class="alert alert-success">登入成功！</div>
+</body>
+</html>

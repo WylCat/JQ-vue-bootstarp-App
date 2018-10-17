@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>分页</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<style type="text/css">
+    body{
+        max-width:500px;
+        margin:20px auto;
+    }
+</style>
+<body>
+  <div>
+     <div>
+        这种奇怪的现象，是因为当时的科学界受进化论推翻“上帝创造论”的哲学思潮影响，盲目地反对传统理论，不承认如《圣经》所言，宇宙是有一个起点的。这一时期的西方科学界普遍坚持宇宙和物质是恒定不变、无始无终的。因此对于所有涉及说宇宙和万物都“有一个起点”的理论一概不予承认。包括像爱因斯坦这样的大科学家也受其影响。爱因斯坦在总结引力场方程，发现这个Rμv-(1/2)Rgμv=kTμv的公式将推导出宇宙其实是一个有着从未停止的物质变化的动态宇宙，于是在该公式中又强加了一个“宇宙常数”，以维持静态宇宙的计算结果。也就是说，最初的场方程其实是这样的：∧gμv+Rμv-(1/2)Rgμv=kTμv，其中常数“∧”为宇宙常数。
+      </div>
+  </div>
+  <ul class="pagination">
+     <!-- pagination 分页 没有居中效果 -->
+      <li><a href="">上一页</a></li>
+      <li class="active"><a href="">1</a></li>
+      <!-- active活跃的，高亮显示 （显示当前页）-->
+      <li><a href="">2</a></li>
+      <li><a href="">3</a></li>
+      <li><a href="">下一页</a></li>
+  </ul>
+
+  <ul class="pager">
+     <!-- pager 分页 整体居中 ，没有页码-->
+      <li><a href="">上一页</a></li>
+      <li class="disabled"><a href="">下一页</a></li>
+      <!-- disabled 无法进行操作，到末尾了 -->
+  </ul>
+
+</body>
+</html>

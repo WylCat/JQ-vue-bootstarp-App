@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>子-父</title>
+</head>
+<body>
+    <div id="app">
+       <love></love>
+    </div>
+</body>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript">
+    Vue.component('love',{
+        template:`<div>
+                    <son @show="show=true"></son>
+                    <div v-if="show">¥99.8</div>
+                  </div>`,
+        data:function(){
+            return {
+                show :false,
+            }
+        }
+
+    })
+
+    Vue.component('son',{
+        template:'<button @click="onclick">显示余额</button>',
+        methods:{
+           onclick:function(){
+              this.$emit('show',{a:1,b:2});   // $emit('事件名',{参数})用于快速的触发事件
+           }
+        }
+    })
+
+     var app = new Vue({
+        el:'#app',
+     })
+</script>
+</html>

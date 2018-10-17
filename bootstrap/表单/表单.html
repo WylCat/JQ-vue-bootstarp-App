@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>表单</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<style type="text/css" media="screen">
+    .small{
+        max-width:800px;
+        margin:20px auto;
+    }
+</style>
+<body>
+<form action="" class="container small">
+   <!--  container 容器/DIV -->
+    <h4>注册</h4>
+    <div class="form-inline">
+    <!-- form-inline 将子元素放入同一行 -->
+        <div class="form-group has-success">
+         <!-- form-group表单组 has-warning棕色/success（成功）绿色/error红色 -->
+            <label class="control-label">姓</label>
+            <!-- control-label 给label内容加颜色 -->
+            <input type="text" class="form-control" />
+            <!-- form-control 输入框 -->
+            <label>名</label>
+            <input type="text" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label>充值金额</label>
+        <div class="input-group">
+          <!-- input-group input组 -->
+            <div class="input-group-addon">¥</div>
+            <!-- input-group-addon 起链接作用，放于input前连接后面的input, -->
+            <input type="text" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+    <label>from</label>
+    <select class="form-control">
+        <option value="1">北京</option>
+         <option value="1">上海</option>
+          <option value="1">杭州</option>
+
+    </select>
+</div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>自定义指令</title>
+</head>
+<style type="text/css">
+    .love{
+        width: 200px;
+        height: 200px;
+        background-color:pink;
+        text-align:center;
+        margin:auto;
+    }
+</style>
+<body>
+  <div id="app">
+      <div v-bool="true" class="love"><!-- 自定义指令与值-->
+          我于戮之中盛放，亦如黎明中的花朵
+      </div>
+      <div v-bool="false" class="love">
+          我于戮之中盛放，亦如黎明中的花朵
+      </div>
+      <div v-bool.border="true" class="love">
+          我是红的，指令
+      </div>
+      <div v-bool:true="true" class="love">
+          假的
+      </div>
+  </div>
+</body>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript">
+   Vue.directive('bool',function(el,binding){//Vue 定义指令的方法（‘指令名’，function（el(指令所在标签)，binding(自动获取指令值)）{}）
+        var val = binding.value;//获取传过来的值
+        var color = binding.modifiers;//获取传过来的  指令.(值).(...)
+        var bool = binding.arg;//获取  指令:(值)
+        if(val){
+            for(var i in color){
+                if(color[i]){
+                    el.style[i]='solid 4px red';
+                }
+            }
+        }else{
+            el.style.backgroundColor="red";
+            el.innerHTML = "我是错的";
+         }
+
+          if(bool==='true'){
+                el.innerHTML = "值为假";
+         }
+   })
+     new Vue({
+        el:'#app',
+     })
+</script>
+</html>

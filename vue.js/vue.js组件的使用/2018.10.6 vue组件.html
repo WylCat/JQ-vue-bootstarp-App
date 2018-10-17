@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>vue指令</title>
+</head>
+
+<body>
+<!-- vue内置指令:
+                 v-model
+                       v-model.trim  清除输入的空格
+                       v-model.number  将输入的字符转换为number类型
+                 v-show
+                 v-if
+                 v-for
+                 v-bind
+
+-->
+
+<div id="app">
+     <input type="text" v-model="name" name="">
+    <!--  v-model=""  vue内置指令 双向绑定属性，实时改变属性 -->
+    <span v-show="age">你的名字是：{{name}}</span><br>
+     <input type="text" v-model="age" name="">
+    <span v-show="age">你的年龄是：{{age}}</span><br>
+     <!-- v-show="" vue内置指令 判断值是否存在，存在显示，不存在隐藏dom元素
+     v-if=""  vue内置指令  判断值是否存在，存在显示，不存在删除dom元素 -->
+    <ul>
+       <li v-for="food in foodList">{{food.name}}:¥{{food.place}}</li>
+      <!--  v-for vue内置指令 读取数组的每一项 -->
+    </ul>
+   <a v-bind:href="url">点我</a>
+   <img v-bind:src="img" alt="">
+    <!-- v-bind:属性  vue内置指令 绑定dom元素的属性-->
+    <button v-on:click="onClick" type="">事件执行</button>
+    <!-- v-on:方法=:"方法(参数)/v-on:{方法:方法名,方法:方法名}"  vue内置指令  绑定方法 -->
+</div>
+</body>
+<script src="vue.js"></script>
+<script src="mian.js"></script>
+</html>

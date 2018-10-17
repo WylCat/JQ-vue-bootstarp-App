@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>混合区域mixins</title>
+</head>
+<body>
+    <div id="app">
+        <love></love>
+        <like></like>
+    </div>
+</body>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript">
+ var we = {  //定义共享数据对象，将共享的数据放入
+    methods:{
+        click:function(){
+            this.show=!this.show;
+        }
+      },
+      data:function(){
+         return {
+            show:false,
+         }
+      }
+ }
+
+
+  Vue.component('love',{
+      template:'<div><button @click="click">点击</button><div v-if="show">3333</div></div>',
+      mixins:[we],//mixins:[共享数据对象名]
+  })
+
+  Vue.component('like',{
+      template:'<div><span @click="click">点我</span><h1 v-if="show">666</h1></div>',
+      mixins:[we],//mixins:[共享数据对象名]
+  })
+
+     new Vue({
+        el:'#app',
+     })
+</script>
+</html>

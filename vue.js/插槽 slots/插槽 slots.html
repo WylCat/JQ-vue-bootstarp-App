@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>插槽 slots</title>
+</head>
+<style type="text/css">
+    .nav{
+        width: 200px;
+        height: 400px;
+        background-color:#ccc;
+    }
+    .ss{
+        width: 200px;
+        height: 100px;
+        font-size:30px;
+    }
+</style>
+<body>
+    <div id="app">
+        <love>
+            <div slot="one"> <!--不同的插槽名对应着不同的内容-->
+                1111
+            </div>
+            <div slot="two"> <!--不同的插槽名对应着不同的内容-->
+                2222
+            </div>
+            <div slot="three"> <!--不同的插槽名对应着不同的内容-->
+                333
+            </div>
+        </love>
+    </div>
+    <template id="capy">
+        <div class="nav">
+            <div class="ss">
+                <slot name="one"></slot><!--插槽，组件里插入，使内容动态 name=“插槽名(区分)”用于填入不同的内容-->
+            </div>
+            <div class="ss">
+                 <slot name="two"></slot>
+            </div>
+            <div class="ss">
+                 <slot name="three"></slot>
+            </div>
+        </div>
+    </template>
+</body>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript">
+   Vue.component('love',{
+      template:"#capy",
+   })
+     new Vue({
+        el:"#app",
+     })
+</script>
+</html>

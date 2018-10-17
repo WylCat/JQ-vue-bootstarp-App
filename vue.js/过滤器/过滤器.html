@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>过滤器</title>
+</head>
+<body>
+  <div id="app">
+      <div>
+          <input v-model="place" />{{place|capy('RMB')}}<!--{{过滤对象|过滤函数名（‘参数’）}}-->
+      </div>
+  </div>
+</body>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript">
+     Vue.filter('capy',function(val,unit){//过滤函数，（‘函数名’），回调函数/执行函数
+        val = val || 0;
+        unit = unit || '元';
+         return val + unit;
+     });
+       new Vue({
+        el:'#app',
+        data:{
+            place:10,
+        }
+       })
+</script>
+</html>

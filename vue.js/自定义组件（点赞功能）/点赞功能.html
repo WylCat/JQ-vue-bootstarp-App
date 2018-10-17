@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>点赞</title>
+</head>
+<style type="text/css">
+    .loved{
+        background-color:pink;
+    }
+</style>
+<body>
+    <div id="app">
+        <love></love>
+    </div>
+    <template id="muban"><!-- 组件模板，可直接放入html,  -->
+    <button :class="{loved:loved}" @click="onclick">厉害{{love_count}}</button>
+    </template>
+</body>
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</html>

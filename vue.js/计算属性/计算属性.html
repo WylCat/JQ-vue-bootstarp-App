@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>计算属性</title>
+</head>
+<body>
+    <table border="1" id="app">
+        <thead>
+            <tr>
+                <th>数学</th>
+
+                <th>英语</th>
+
+                <th>语文</th>
+                <th>总分</th>
+                <th>平均分</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="text" v-model="math">
+                </td>
+
+                <td><input type="text" v-model="english"></td>
+
+                <td><input type="text" v-model="chinaese"></td>
+                <td>{{sum}}</td>
+                <td>{{average}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script src="vue.js"></script>
+<script src="main.js"></script>
+</html>
