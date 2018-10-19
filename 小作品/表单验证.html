@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+       input{
+        width: 200px;
+        height: 40px;
+        font-size:20px;
+       }
+       .none{
+        font-size:14px;
+        color:red;
+        display:none;
+       }
+    </style>
+    <script src="jquery.min.js"> </script>
+</head>
+<body>
+   <form action="aaa.php" method="get" accept-charset="utf-8">
+         <p>用户名</p>
+         <p><input type="text" name ="admin" maxlength="12" /><span class="none">用户名少于6个字符</span></p>
+         <p>密码</p>
+         <p><input type="text" name = "password" maxlength="16"/><span class="none">密码少于8位字符格式</span></p>
+          <p>重复密码</p>
+         <p><input type="text" name = "passwords" maxlength="16"/><span class="none">两次密码不一致</span></p>
+          <p>邮箱</p>
+         <p><input type="text" name = "eamil"/><span class="none">邮箱格式不正确</span></p>
+          <p>电话</p>
+         <p><input type="text" name = "phone" maxlength="11"/><span class="none">电话号码格式不正确</span></p>
+         <input type="submit" value="提交">
+   </form>
+</body>
+<script type="text/javascript">
+     $(function(){
+        $('input[name=admin]').blur(function(){
+            val = this.value;
+             if(val.length<6){
+                $(this).next().show();
+                a=0;
+             }else{
+                $(this).next().hide();
+                a=1;
+             }
+        })
+        $('input[name=password]').blur(function(){
+            val = this.value;
+            if(val.length<8){
+                $(this).next().show();
+                b=0;
+            }else{
+                $(this).next().hide();
+                b=1;
+            }
+        })
+         $('input[name=passwords]').blur(function(){
+            val = this.value;
+            val1 = $('input[name=password]').val();
+            if(val!=val1){
+                $(this).next().show();
+                c=0;
+            }else{
+                $(this).next().hide();
+                c=1;
+            }
+        })
+         $('input[name=eamil]').blur(function(){
+            val = this.value;
+            if(val.match(/^\w+@\w+\.\w+$/i)){
+                $(this).next().hide();
+                d=1;
+            }else{
+                $(this).next().show();
+                d=0;
+            }
+        })
+         $('input[name=phon]').blur(function(){
+            val = this.value;
+            if(val.match(/^187\d{8}$/)){
+                $(this).next().hide();
+                e=1;
+            }else{
+                $(this).next().show();
+                e=0;
+                
+            }
+        })
+         $('form').submit(function(){
+              $('input[name=admin]').blur();
+              $('input[name=password').blur();
+              $('input[name=passwords]').blur();
+              $('input[name=eamil]').blur();
+              $('input[name=phone]').blur();
+              if(a+b+c+d+e!=5){
+               return false;
+              }
+         })
+     })
+</script>
+</html>

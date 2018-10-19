@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color:pink;
+            position:absolute;
+            top:0px;
+            left:0px;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+   <div class="box"></div>
+</body>
+<script type="text/javascript">
+     $(function(){
+        function drag(obj){
+            obj.bind('mousedown',start);
+           function start(event){
+              startX =event.clientX - obj.offset().left;
+              startY =event.clientY - obj.offset().top;
+              $(document).bind('mousemove',move);
+              $(document).bind('mouseup',stop);
+              return false;
+           }
+           function move(event){
+               obj.css({
+                'left':(event.clientX - startX) + "px",
+                'top':(event.clientY - startY)+ "px"
+               });
+               return false;
+           }
+           function stop(){
+              $(document).unbind('mousemove',move);
+              $(document).unbind('mouseup',stop);
+           }
+        }
+        obj = $('.box');
+        drag(obj);
+     })
+</script>
+</html>
