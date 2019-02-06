@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carousel(轮播插件)</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body >
+<div class="container" style="padding:40px;">
+     <div id="myCarousel" class="carousel slide" data-interval="4000" data-ride="carousel">
+         <!-- .carousel slide 轮播图框架   id 对象  
+            data-interval=""轮播间隔时间默认5000，若为false,则停止自动轮播
+            data-pause=""默认值hover 鼠标移入暂停轮播图
+            data-wrap=""默认值true  轮播是否连续循环
+            data-ride="carousel"  在页面加载时开始自动轮播
+        -->
+
+         <!-- //*** 轮播指标（小圆点）***// -->
+
+         <ol class="carousel-indicators">
+             <!-- .carousel-indicators 轮播指标（小圆点） -->
+             <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+             <!-- data-target="id" 与控制对象相互响应   data-slide-to="0" 轮播序列第几位 -->
+             <li data-target="#myCarousel" data-slide-to="1"></li>
+             <li data-target="#myCarousel" data-slide-to="2"></li>
+             <li data-target="#myCarousel" data-slide-to="3"></li>
+             <li data-target="#myCarousel" data-slide-to="4"></li>
+         </ol>
+
+         <!-- //*** 轮播内容(图片)***// -->
+
+         <div class="carousel-inner">
+             <!-- .carousel-inner 轮播图片组样式盒子 -->
+             <div class="item active">
+                    <!-- .item active 轮播图片个体 -->
+                    <img src="img/b1.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h3>刀剑神域</h3>
+                        <p>柯南从沉睡中苏醒，是否预示着哪里又发生了凶案！！！</p>
+                    </div>
+             </div>
+             <div class="item">
+                    <img src="img/b2.jpg" alt="">
+                    <div class="carousel-caption">
+                            <h3>灼眼的夏娜</h3>
+                            <p>柯南从沉睡中苏醒，是否预示着哪里又发生了凶案！！！</p>
+                     </div>
+            </div>
+            <div class="item">
+                    <img src="img/b3.png" alt="">
+                    <div class="carousel-caption">
+                            <h3>斩赤红之瞳</h3>
+                            <p>柯南从沉睡中苏醒，是否预示着哪里又发生了凶案！！！</p>
+                    </div>
+            </div>
+            <div class="item">
+                    <img src="img/b4.jpg" alt="">
+                    <div class="carousel-caption">
+                            <h3>妖精的尾巴</h3>
+                            <p>柯南从沉睡中苏醒，是否预示着哪里又发生了凶案！！！</p>
+                    </div>
+            </div>
+            <div class="item">
+                    <img src="img/b5.jpg" alt="">
+                    <div class="carousel-caption">
+                            <h3>死神BLEACH</h3>
+                            <p>柯南从沉睡中苏醒，是否预示着哪里又发生了凶案！！！</p>
+                    </div>
+            </div>
+         </div>
+
+          <!-- //*** 轮播导航(左右方向键)***// -->
+          <a href="#myCarousel" class="carousel-control left center" data-slide="prev">&lsaquo;</a>
+         <!-- data-slide="prev/next" 轮播命令 上一张/下一张   &lsaquo/&rsaquo 左右方向键（大于小于号） -->
+          <a href="#myCarousel" class="carousel-control right" data-slide="next">&rsaquo;</a>
+     </div>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+   
+</script>
+</html>

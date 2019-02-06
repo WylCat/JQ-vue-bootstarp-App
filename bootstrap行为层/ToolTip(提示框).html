@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TooloTip提示框</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body style="padding:40px;">
+     <div class="container">
+         <a herf="#" data-toggle="tooltip" data-placement="right" title="长得不如张某某">王花花</a>
+         <!-- data-toggle="tooltip" 显示提示效果 data-placement="left/right/top/bottom" 显示提示框的位置，top为默认值 -->
+          <button type="button" class="btn btn-primary" data-toggle="tooltip" title="牛逼的不行不行的">赵日天</button>
+          <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<h2>帅气！</h2>">王阳阳</button>
+             <!-- data-html="true" 以html的语义解析title里的字符ture/false -->
+     </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+     $('[data-toggle="tooltip"]').tooltip();
+    //  将所有带有提示框属性的标签初始化（不加效果将无法显示）
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Button按钮事件</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body style="padding:40px;">
+     <div class="container">
+          <button class="btn btn-default" data-loading-text=" 加载中...">获取文件</button>
+          <!-- data-loading-text=""在调用button()事件时，按钮显示为“...” -->
+          <button class="btn btn-success" data-toggle="button">看变化</button>
+          <!-- data-toggle="button" 给按钮带有开关的状态 -->
+     </div>
+
+     <div class="container">
+          <div class="btn-group" data-toggle="buttons">
+           <!-- data-toggle="buttons"给复选按钮组添加开关的状态 -->
+              <label class="btn btn-success">
+                  <input type="checkbox">王花花
+              </label>
+              <label class="btn btn-success">
+                <input type="checkbox">王哈哈
+            </label>
+            <label class="btn btn-success">
+                <input type="checkbox">王莎莎
+            </label>
+          </div>
+     </div>
+
+     <div class="container">
+            <div class="btn-group" data-toggle="buttons">
+             <!-- data-toggle="buttons"给单选按钮组添加开关的状态 -->
+                <label class="btn btn-success">
+                    <input type="radio">王花花
+                </label>
+                <label class="btn btn-success">
+                  <input type="radio">王哈哈
+              </label>
+              <label class="btn btn-success">
+                  <input type="radio">王莎莎
+              </label>
+            </div>
+       </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+    $(function(){
+        $('.btn-default').click(function(){
+            $(this).button("loading").delay(1000).queue(function(){
+                //  button(loading)按钮加载事件 .delay(1000).queue() 延时1秒钟，进行函数回调
+                $(this).button('reset');
+                // button('reset')回调至初始化
+            })
+        })
+    })
+</script>
+</html>

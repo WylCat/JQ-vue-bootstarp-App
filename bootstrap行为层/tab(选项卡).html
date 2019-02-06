@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tap选项卡</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+    <nav class="navbar navbar-pills navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".bs-js-navbar-scrollspy">
+                <!-- 当导航栏尺寸发生改变时，将隐藏导航栏选项，显示一个下拉按钮 -->
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">哔哩哔哩动画</a>
+        </div>
+        <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
+            <ul class="nav nav-tabs" id="myTab">
+                <!-- 选项卡标签，每个选项卡的链接对应各自的id选择器，选项卡加data-toggle="tab" 标识行为 -->
+                <li class="active"><a href="#DH" data-toggle="tab">动画</a></li>
+                <li><a href="#FJ" data-toggle="tab">番剧</a></li>
+                <li><a href="#WD" data-toggle="tab">舞蹈</a></li>
+                <li><a href="#YY" data-toggle="tab">音乐</a></li>
+                <li><a href="#GC" data-toggle="tab">鬼畜</a></li>
+                <li class="dropdown">
+                    <a href="#" class="data-toggle" data-toggle="dropdown">纪录片<span class="caert"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#SM" tabindex="-1" data-toggle="tab">生命的起源</a></li>
+                        <li><a href="#SQ" tabindex="-1" data-toggle="tab">史前爆炸</a></li>
+                        <li><a href="#RL" tabindex="-1" data-toggle="tab">人类灭亡</a></li>
+                        <li><a href="#HX" tabindex="-1" data-toggle="tab">彗星遗迹</a></li>   
+                    </ul>
+                </li>
+                <li> <h5 id="a-Tab">当前浏览的标签页: <span style="background-color: green;"></span></h5></li>
+                <li><h5 id="p-Tab">前一个浏览的标签页: <span style="background-color: green;"></span></h5></li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <!-- 选项卡内容区域 id与上相对应 （内容板块必须与选项栏同级或相邻，原因不明）-->
+                    <div class="tab-pane fade in active" id="DH"> 
+                            <h3>动画</h3>
+                        <p>彗星（Comet）是进入太阳系内亮度和形状会随日距变化而变化的绕日运动的天体，呈云雾状的独特外貌。彗星分为彗核、彗发、彗尾三部分。彗核由冰物质构成，当彗星接近恒星时，彗星物质升华，在冰核周围形成朦胧的彗发和一条稀薄物质流构成的彗尾。彗星的质 量、密度很 小，当远离 太阳时只是一个由水、氨、甲烷等冻结的冰块和夹杂许多固体尘埃粒子的 “脏雪球”。当接近太阳时，彗星在太阳辐射作用下分解成彗头和彗尾，状如扫帚。</p>
+                    </div>
+                    <div class="tab-pane fade" id="FJ">
+                        <h3>番剧</h3> 
+                        <p>彗星（Comet）是进入太阳系内亮度和形状会随日距变化而变化的绕日运动的天体，呈云雾状的独特外貌。彗星分为彗核、彗发、彗尾三部分。彗核由冰物质构成，当彗星接近恒星时，彗星物质升华，在冰核周围形成朦胧的彗发和一条稀薄物质流构成的彗尾。彗星的质 量、密度很 小，当远离 太阳时只是一个由水、氨、甲烷等冻结的冰块和夹杂许多固体尘埃粒子的 “脏雪球”。当接近太阳时，彗星在太阳辐射作用下分解成彗头和彗尾，状如扫帚。</p>
+                    </div>
+                    <div class="tab-pane fade" id="WD"> 
+                        <h3>舞蹈</h3>
+                        <p>彗星（Comet）是进入太阳系内亮度和形状会随日距变化而变化的绕日运动的天体，呈云雾状的独特外貌。彗星分为彗核、彗发、彗尾三部分。彗核由冰物质构成，当彗星接近恒星时，彗星物质升华，在冰核周围形成朦胧的彗发和一条稀薄物质流构成的彗尾。彗星的质 量、密度很 小，当远离 太阳时只是一个由水、氨、甲烷等冻结的冰块和夹杂许多固体尘埃粒子的 “脏雪球”。当接近太阳时，彗星在太阳辐射作用下分解成彗头和彗尾，状如扫帚。</p>
+                    </div>
+                    <div class="tab-pane fade" id="YY"> 
+                        <h3>音乐</h3>
+                        <p>彗星（Comet）是进入太阳系内亮度和形状会随日距变化而变化的绕日运动的天体，呈云雾状的独特外貌。彗星分为彗核、彗发、彗尾三部分。彗核由冰物质构成，当彗星接近恒星时，彗星物质升华，在冰核周围形成朦胧的彗发和一条稀薄物质流构成的彗尾。彗星的质 量、密度很 小，当远离 太阳时只是一个由水、氨、甲烷等冻结的冰块和夹杂许多固体尘埃粒子的 “脏雪球”。当接近太阳时，彗星在太阳辐射作用下分解成彗头和彗尾，状如扫帚。</p>
+                    </div>
+                    <div class="tab-pane fade" id="GC">
+                        <h3>鬼畜</h3> 
+                        <p>彗星（Comet）是进入太阳系内亮度和形状会随日距变化而变化的绕日运动的天体，呈云雾状的独特外貌。彗星分为彗核、彗发、彗尾三部分。彗核由冰物质构成，当彗星接近恒星时，彗星物质升华，在冰核周围形成朦胧的彗发和一条稀薄物质流构成的彗尾。彗星的质 量、密度很 小，当远离 太阳时只是一个由水、氨、甲烷等冻结的冰块和夹杂许多固体尘埃粒子的 “脏雪球”。当接近太阳时，彗星在太阳辐射作用下分解成彗头和彗尾，状如扫帚。</p>
+                    </div>
+                    <div class="tab-pane fade" id="SM">
+                        <h3>生命的起源</h3> 
+                        <p>彗星（Comet）是进入太阳系内亮度和形状会随日距变化而变化的绕日运动的天体，呈云雾状的独特外貌。彗星分为彗核、彗发、彗尾三部分。彗核由冰物质构成，当彗星接近恒星时，彗星物质升华，在冰核周围形成朦胧的彗发和一条稀薄物质流构成的彗尾。彗星的质 量、密度很 小，当远离 太阳时只是一个由水、氨、甲烷等冻结的冰块和夹杂许多固体尘埃粒子的 “脏雪球”。当接近太阳时，彗星在太阳辐射作用下分解成彗头和彗尾，状如扫帚。</p>
+                    </div>
+                    <div class="tab-pane fade" id="SQ">
+                        <h3>史前爆炸</h3> 
+                        <p>彗星（Comet）是进入太阳系内亮度和形状会随日距变化而变化的绕日运动的天体，呈云雾状的独特外貌。彗星分为彗核、彗发、彗尾三部分。彗核由冰物质构成，当彗星接近恒星时，彗星物质升华，在冰核周围形成朦胧的彗发和一条稀薄物质流构成的彗尾。彗星的质 量、密度很 小，当远离 太阳时只是一个由水、氨、甲烷等冻结的冰块和夹杂许多固体尘埃粒子的 “脏雪球”。当接近太阳时，彗星在太阳辐射作用下分解成彗头和彗尾，状如扫帚。</p>
+                    </div>
+                    <div class="tab-pane fade" id="Rl">
+                        <h3>人类灭亡</h3> 
+                        <p>彗星（Comet）是进入太阳系内亮度和形状会随日距变化而变化的绕日运动的天体，呈云雾状的独特外貌。彗星分为彗核、彗发、彗尾三部分。彗核由冰物质构成，当彗星接近恒星时，彗星物质升华，在冰核周围形成朦胧的彗发和一条稀薄物质流构成的彗尾。彗星的质 量、密度很 小，当远离 太阳时只是一个由水、氨、甲烷等冻结的冰块和夹杂许多固体尘埃粒子的 “脏雪球”。当接近太阳时，彗星在太阳辐射作用下分解成彗头和彗尾，状如扫帚。</p>
+                    </div>
+                    <div class="tab-pane fade" id="HX">
+                        <h3>彗星遗迹</h3> 
+                        <p>彗星（Comet）是进入太阳系内亮度和形状会随日距变化而变化的绕日运动的天体，呈云雾状的独特外貌。彗星分为彗核、彗发、彗尾三部分。彗核由冰物质构成，当彗星接近恒星时，彗星物质升华，在冰核周围形成朦胧的彗发和一条稀薄物质流构成的彗尾。彗星的质 量、密度很 小，当远离 太阳时只是一个由水、氨、甲烷等冻结的冰块和夹杂许多固体尘埃粒子的 “脏雪球”。当接近太阳时，彗星在太阳辐射作用下分解成彗头和彗尾，状如扫帚。</p>
+                    </div>
+                </div>
+        </div>
+    </nav>
+    
+           
+            
+   
+   
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+    //    让第n个选项卡显示
+       $('#myTab li:eq(n) a').tab('show');
+
+
+       $('a[data-toggle="tab"]').on("show.bs.tab",function(e){
+           var activeTab = $(e.target).text();
+           $('#a-Tab span').html(activeTab);
+        //    当前浏览的标签
+           var pertab = $(e.relatedTarget).text();
+           $('#p-Tab span').html(pertab);
+        //    上一个浏览的标签
+
+       })
+</script>
+</html>

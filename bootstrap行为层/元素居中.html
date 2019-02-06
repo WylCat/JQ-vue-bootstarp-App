@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>元素居中</title>
+</head>
+<body>
+    <div class="container">
+        <!-- 文字居中  .text-center -->
+        <div class="centainer">
+            <p class="text-center">sdlfklsdkflsdkflsfsdjs</p>
+        </div>
+        <!-- 图片居中/块级元素居中 .center-block -->
+        <div class="container">
+            <div class="center-block" style="width:200px;height:200px;background-color:red;"></div> 
+            <img class="center-block" src="img/b4 .jpg" alt="">
+        </div>
+        <!-- 利用偏移量实现居中 .col-md-offset-* -->
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3" style="width:200px;height:200px;background-color:blue;"></div>
+            <!-- 设定目标所占的列数为6列，偏移数为3相当于   3,6,3 的格式呈现，也即实现了居中表示 -->
+        </div>
+    </div>
+</body>
+</html>

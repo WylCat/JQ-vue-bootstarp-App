@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>滚动监听</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body style="padding-top:70px;">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar-example" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".bs-js-navbar-scrollspy" >
+                <!-- class="data-toggle"  当响应式导航栏触发时应用data类，显示   data-toggle=""指定开关作用域 target选择器，作用域id/class -->
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">阿里巴巴</a>
+        </div>
+        <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
+            <!-- collapse navbar-collapse 添加响应式导航栏  bs 添加类名供选择-->
+         <ul class="nav navbar-nav">
+            <li><a href="#TX">腾讯</a></li>
+            <li><a href="#WY">网易</a></li>
+            <li><a href="#XY">迅游</a></li>
+            <li><a href="#JY">九游</a></li>
+            <li><a href="#XDWL">心动网络</a></li>
+            <li><a href="#LLTX">琳琅天下</a></li>
+            <li class="dropdown">
+                <a href="#" id="navbardrop" class="data-toggle" data-toggle="dropdown">麋鹿新奇 <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="navbardrop">
+                    <!-- 作用同上 aria-labelledby 屏幕阅读器提供值 -->
+                    <li><a href="#MLXQ" tabindex="-1">606传奇</a></li>
+                    <li><a href="#NS" tabindex="-1">606男神</a></li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li><a href="#WZ" tabindex="-1">607外传</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <!-- 添加id nabbar-example 选择监听对象 -->
+<div data-spy="scroll" data-target="#navbar-example" data-offset="10" style="height:200px;overflow:auto;position: relative;">
+
+    <div class="section">
+     <h4 id="TX">腾讯</h4>
+     <p>天文学的研究对于我们的生活有很大的实际意义，对于人类的自然观有很大的影响。古代的天文学家通过观测太阳、月球和其他一些天体及天象，确定了时间、方向和历法。这也是天体测量学的开端。如果从人类观测天体，记录天象算起，天文学的历史至少已经有五六千年了。天文学在人类早期的文明史中，占有非常重要的地位。埃及的金字塔、欧洲的巨石阵都是很著名的史前天文遗址。哥白尼的日心说曾经使自然科学从神学中解放出来；康德和拉普拉斯关于太阳系起源的星云说，在十八世纪形而上学的自然观上打开了第一个缺口。</p>
+    </div>
+    <div class="section">
+     <h4 id="WY">网易</h4>
+     <p>天文学的研究对于我们的生活有很大的实际意义，对于人类的自然观有很大的影响。古代的天文学家通过观测太阳、月球和其他一些天体及天象，确定了时间、方向和历法。这也是天体测量学的开端。如果从人类观测天体，记录天象算起，天文学的历史至少已经有五六千年了。天文学在人类早期的文明史中，占有非常重要的地位。埃及的金字塔、欧洲的巨石阵都是很著名的史前天文遗址。哥白尼的日心说曾经使自然科学从神学中解放出来；康德和拉普拉斯关于太阳系起源的星云说，在十八世纪形而上学的自然观上打开了第一个缺口。</p>
+    </div>
+     <div class="section">
+     <h4 id="XY">迅游 <a href="#" onclick="removeSection(this);">&times;删除该事件</a></h4>
+     <p>天文学的研究对于我们的生活有很大的实际意义，对于人类的自然观有很大的影响。古代的天文学家通过观测太阳、月球和其他一些天体及天象，确定了时间、方向和历法。这也是天体测量学的开端。如果从人类观测天体，记录天象算起，天文学的历史至少已经有五六千年了。天文学在人类早期的文明史中，占有非常重要的地位。埃及的金字塔、欧洲的巨石阵都是很著名的史前天文遗址。哥白尼的日心说曾经使自然科学从神学中解放出来；康德和拉普拉斯关于太阳系起源的星云说，在十八世纪形而上学的自然观上打开了第一个缺口。</p>
+    </div>
+     <div class="section">
+     <h4 id="JY">九游</h4>
+     <p>天文学的研究对于我们的生活有很大的实际意义，对于人类的自然观有很大的影响。古代的天文学家通过观测太阳、月球和其他一些天体及天象，确定了时间、方向和历法。这也是天体测量学的开端。如果从人类观测天体，记录天象算起，天文学的历史至少已经有五六千年了。天文学在人类早期的文明史中，占有非常重要的地位。埃及的金字塔、欧洲的巨石阵都是很著名的史前天文遗址。哥白尼的日心说曾经使自然科学从神学中解放出来；康德和拉普拉斯关于太阳系起源的星云说，在十八世纪形而上学的自然观上打开了第一个缺口。</p>
+    </div>
+     <div class="section">
+     <h4 id="XDWL">心动网络</h4>
+     <p>天文学的研究对于我们的生活有很大的实际意义，对于人类的自然观有很大的影响。古代的天文学家通过观测太阳、月球和其他一些天体及天象，确定了时间、方向和历法。这也是天体测量学的开端。如果从人类观测天体，记录天象算起，天文学的历史至少已经有五六千年了。天文学在人类早期的文明史中，占有非常重要的地位。埃及的金字塔、欧洲的巨石阵都是很著名的史前天文遗址。哥白尼的日心说曾经使自然科学从神学中解放出来；康德和拉普拉斯关于太阳系起源的星云说，在十八世纪形而上学的自然观上打开了第一个缺口。</p>
+    </div>
+     <div class="section">
+     <h4 id="LLTX">琳琅天下 <a href="#" onclick="removeSection(this);">&times;删除该事件</a></h4>
+     <p>天文学的研究对于我们的生活有很大的实际意义，对于人类的自然观有很大的影响。古代的天文学家通过观测太阳、月球和其他一些天体及天象，确定了时间、方向和历法。这也是天体测量学的开端。如果从人类观测天体，记录天象算起，天文学的历史至少已经有五六千年了。天文学在人类早期的文明史中，占有非常重要的地位。埃及的金字塔、欧洲的巨石阵都是很著名的史前天文遗址。哥白尼的日心说曾经使自然科学从神学中解放出来；康德和拉普拉斯关于太阳系起源的星云说，在十八世纪形而上学的自然观上打开了第一个缺口。</p>
+    </div>
+     <div class="section">
+     <h4 id="MLXQ">麋鹿新奇</h4>
+     <p>天文学的研究对于我们的生活有很大的实际意义，对于人类的自然观有很大的影响。古代的天文学家通过观测太阳、月球和其他一些天体及天象，确定了时间、方向和历法。这也是天体测量学的开端。如果从人类观测天体，记录天象算起，天文学的历史至少已经有五六千年了。天文学在人类早期的文明史中，占有非常重要的地位。埃及的金字塔、欧洲的巨石阵都是很著名的史前天文遗址。哥白尼的日心说曾经使自然科学从神学中解放出来；康德和拉普拉斯关于太阳系起源的星云说，在十八世纪形而上学的自然观上打开了第一个缺口。</p>
+    </div>
+     <div class="section">
+     <h4 id="NS">男神</h4>
+     <p>天文学的研究对于我们的生活有很大的实际意义，对于人类的自然观有很大的影响。古代的天文学家通过观测太阳、月球和其他一些天体及天象，确定了时间、方向和历法。这也是天体测量学的开端。如果从人类观测天体，记录天象算起，天文学的历史至少已经有五六千年了。天文学在人类早期的文明史中，占有非常重要的地位。埃及的金字塔、欧洲的巨石阵都是很著名的史前天文遗址。哥白尼的日心说曾经使自然科学从神学中解放出来；康德和拉普拉斯关于太阳系起源的星云说，在十八世纪形而上学的自然观上打开了第一个缺口。</p>
+    </div>
+     <div class="section">
+     <h4 id="WZ">外传</h4>
+     <p>天文学的研究对于我们的生活有很大的实际意义，对于人类的自然观有很大的影响。古代的天文学家通过观测太阳、月球和其他一些天体及天象，确定了时间、方向和历法。这也是天体测量学的开端。如果从人类观测天体，记录天象算起，天文学的历史至少已经有五六千年了。天文学在人类早期的文明史中，占有非常重要的地位。埃及的金字塔、欧洲的巨石阵都是很著名的史前天文遗址。哥白尼的日心说曾经使自然科学从神学中解放出来；康德和拉普拉斯关于太阳系起源的星云说，在十八世纪形而上学的自然观上打开了第一个缺口。</p>
+    </div>
+</div>
+    <div id="watch"></div>
+    <!-- 添加API  data-spy="scroll"添加滚动监听API  data-target 添加监听对象 -->
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>    
+        $(function(){
+           removeSection=function(e){
+              // 点击事件
+               $(e).parents(".section").remove();
+            //    找到带有事件的标签的父级含有.section类的标签删除
+               $('[data-spy="scroll"]').each(function(){
+                   var $spy=$(this).scrollspy('refresh')
+               });
+            //    找到所有含有滚动监听的标签，遍历一遍刷新事件
+           }
+        //    $('#navbar-example').scrollspy();
+            //    重新绑定滚动监听事件
+            $('#navbar-example').on('activate.bs.scrollspy',function(){
+                 var activeText=$('.nav li.active>a').text();
+                 $('#watch').html("目前正在观看"+activeText);
+            })
+        })
+ </script>
+</html>

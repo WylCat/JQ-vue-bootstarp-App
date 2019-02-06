@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+ <div class="container">
+    <div class="dropdown">
+        <button type="button" class="btn btn-warning" data-toggle="dropdown">下拉菜单<span class="caret"></span></button>
+        <ul class="dropdown-menu list-group">
+            <li class="list-group-item"><a href="#">菜单一</a></li>
+            <li class="list-group-item"><a href="#">菜单一</a></li>
+            <li class="list-group-item"><a href="#">菜单一</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="navbar navbar-default">
+          <div class="navbar-header">
+              <a class="navbar-brand" href="#">肯德基</a>
+          </div>
+          <ul class="nav navbar-nav">
+              <li class="active"><a href="#">炸鸡</a></li>
+              <li><a href="#">烤串</a></li>
+              <li><a href="#">汉堡</a></li>
+              <li><a href="#">鸡腿</a></li>
+              <li class="dropdown" >
+                  <a id="dop" href="#" data-toggle="dropdown">全家桶 <span class="caret"></span></a>
+                   <!-- data-toggle通过属性静态调用实现 -->
+                  <ul class="dropdown-menu">
+                        <li><a href="#">烤串</a></li>
+                        <li class="divider"></li>
+                        <!-- divider 分割线 -->
+                        <li><a href="#">汉堡</a></li>
+                        <li><a href="#">鸡腿</a></li>
+                  </ul>
+             </li>
+          </ul>
+    </div>
+</div>
+<!-- 通过js触发 -->
+<button id="btn" class="btn btn-default">测试</button>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+   $(function(){
+       $('#btn').click(function(){
+         $('#dop').dropdown("toggle");
+       })
+   })
+</script>
+</html>

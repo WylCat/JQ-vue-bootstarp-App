@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alert警告框</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body style="padding:40px;">
+     <div class="container">
+           <div class="alert alert-warning">
+               <a href="#" data-dismiss="alert" class="close">&times;</a>
+               <!-- data-dismiss="alert" 添加此APi，可关闭这个alert警告框  alert框没有其他的选项（data-show...） -->
+               <strong>警告！</strong>
+               您的网络出现问题！
+           </div>
+           <div class="alert alert-success">
+            <a href="#" data-dismiss="alert" class="close">&times;</a>
+            <!-- data-dismiss="alert" 添加此APi，可关闭这个alert警告框  alert框没有其他的选项（data-show...） -->
+            <strong>成功！</strong>
+            WIFI网络已连接！
+        </div>
+     </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+    $(function(){
+        $('.close').alert();
+        // 靠其他调用alert
+    })
+</script>
+</html>

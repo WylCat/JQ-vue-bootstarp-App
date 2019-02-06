@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对话框</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+   
+    <!-- 通过属性静态调用实现 -->
+
+    <h2>模态框</h2>
+     <!-- 触发按钮 -->
+   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">弹弹弹</button>
+     <!-- 添加data-backdrop 当对话框弹出，点击背景/其他地方无法关闭对话框
+            添加data-show  一开始显示对话框 值为true/false
+          添加herf="**.html"可默认指示显示html里的内容
+          添加data-remote="**.html",可规定显示内容
+        -->
+   <!-- js调用 -->
+   <div id="btn" class="btn btn-default">js调用</div>
+   <!-- data-toggle="" 开关行为=“控制对象标签” data-target=""控制对象id -->
+      <!-- 显示框 -->
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+              <button  type="button" data-dismiss="modal" class="close">&times;</button>
+               <!-- data-dismiss="对象标签" 取消/关闭 -->
+              <h4 class="modal-title">标题</h4>
+          </div>
+          <div class="modal-body">
+                通过 Bower、Composer、Meteor 或者 npm 可以将 bootstrap 的 Sass 和 JavaScript 源码下载到本地。这些包管理工具所下载的 Bootstrap 文件中不包括文档，但是包含了完整的编译系统和说明文件
+          </div>
+          <div class="modal-footer">
+              <button type="button" data-dismiss="modal" class="btn btn-primary">取消</button>
+              <button type="button" class="btn btn-primary">提交</button>
+          </div>
+      </div>
+    </div>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+    // 动态调用
+   $('#btn').click(function(){
+       $('#myModal').modal({backdrop:false});
+    //    添加backdrop:false 当对话框弹出，点击背景/其他地方无法关闭对话框
+   })
+//    $('#myModal').modal({true:true});
+  //    添加show  一开始显示对话框
+  $('#myModal').on('show.bs.modal',function(){
+        console.log("显示触发");    
+  })
+  $('#myModal').on('hide.bs.modal',function(){
+        console.log("隐藏触发");
+        
+  })
+</script>
+</html>
