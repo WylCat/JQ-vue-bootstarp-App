@@ -1,0 +1,48 @@
+.navbar-bg{
+    padding:0 10%;
+    background-color:rgb(255,255,255,0.6);
+    opacity: 0.7;
+}
+.navbar-bg a{
+    color: black;
+}
+.admin{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+.login-img{
+    width: 180px;
+    height: 100px;
+}
+.login-bg-img{
+    height: 120px;
+    background-image: url(../img/bg3.jpeg);
+    background-position: 100% 30%;
+    margin-bottom: 10px;
+}
+.login-content{
+    padding:0 20%;
+}
+.black{
+    height: 2px;
+    background-color:#ccc;
+    margin-top: 20px;
+}
+.login-span>span{
+    font-size: 20px;
+    margin:5px;
+}
+.img-DR{
+    padding: 0 30px 10px 30px;
+}
+.form-group{
+    padding:20px;
+}
+.login-inp{
+    margin:35px 0px 0px 0px;
+}
+.none{
+    color:red;
+    display: none;
+}

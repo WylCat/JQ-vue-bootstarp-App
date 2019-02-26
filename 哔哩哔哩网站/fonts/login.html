@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登入-哔哩哔哩干杯</title>
+    <link rel="icon" href="../img/favicon.ico">  <!--icon矢量图标--> 
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-bg" style="margin-bottom:0;padding-bottom: 0;">
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".bs-js-navbar-scrollspy" >
+                            <span class="sr-only">切换导航</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                    </button>
+            <a class="navbar-brand" href="../index.html"><img  style="display: inline-block;" src="../img/zhuzhan.ico" alt="">主站</a>
+        </div>
+        <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="../index.html">画友</a></li>
+                <li><a href="../index.html">音频</a></li>
+                <li><a href="../index.html">游戏中心</a></li>
+                <li><a href="../index.html">会员购</a></li>
+                <li><a href="../index.html">直播</a></li>
+                <li><a href="../index.html">漫画</a></li>
+                <li><a href="../index.html">下载APP</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li data-toggle="tooltip" data-placement="left" data-html="true" title="<p class='small'>登入后你可以:</p><img class='login-img' src='../img/login.png'>">
+                    <img  class="admin" src="../img/admin.jpg" alt="">
+                </li>
+                <li data-toggle="tooltip" data-placement="bottom" data-html="true" title="<p>上次浏览:</p><p><span class='btn-block'>目前暂无浏览记录</span></p>">
+                    <a href="">历史</a>
+                </li>
+                <li data-toggle="tooltip" data-placement="bottom" data-html="true" title="<p>您还没有登入</p>" ><a href="" style="background-color:deeppink;border-radius: 0 0 5px 5px;">投稿</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="login-bg-img"></div>
+    <div class="login-content">
+        <div class="row" id="myTab">
+            <div class="col-md-5 black"></div>
+            <div class="col-md-2 login-span">
+                <span class="active" data-toggle="tab" data-target="#DR">登入</span>
+                <span>/</span>
+                <span data-toggle="tab" data-target="#ZC">注册</span>
+            </div>
+            <div class="col-md-5 black"></div>
+        </div>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade in active" id="DR">
+                <div class="col-md-6" style="border-right:solid 1px #ccc;">
+                    <h4>扫一扫下面的二维码即可登入:</h4>
+                    <div class="img-DR">
+                        <img class="img-responsive" src="../img/two.png" alt="">
+                        <h5 class="text-center">实在不行可以尝试右边账号密码登入!!</h5>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input class="form-control login-inp" type="text" value="手机号/邮箱" name="admin" id="">
+                        <p class="none">格式错误</p>
+                        <input class="form-control login-inp" type="text" value="密码" name="password" id="">
+                        <p class="none">密码错误</p>
+                        <div class="row login-inp">
+                             <div class="col-md-7">
+                                    <input class="form-control" type="text" name="number" value="验证码" >
+                                    <p class="none">验证码错误</p>
+                             </div>
+                             <div class="col-md-1"></div>
+                             <div class="col-md-4">
+                                 <button class="btn btn-success btn-block">获取验证码</button>
+                             </div>
+                        </div>
+                        <div class="row" style="padding:30px 10px 0px 10px;">
+                            <div class="col-md-12">
+                                <h5 class="pull-right"><a href="#">无法验证？</a> <a href="#">忘记密码？</a></h5>
+                            </div>
+                            <div class="col-md-12">
+                                    <button class="btn btn-warning col-md-5" type="submit">登入</button>
+                                    <div class="col-md-2"></div>
+                                    <button class="btn btn-default col-md-5" id="sumbit-zc">注册</button>
+                            </div>
+                            <div class="col-md-12">
+                                <h5 class="pull-left"><a href="#">其他方式登入</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="ZC">
+                <div class="row" style="padding:0 25%;">
+                        <div class="form-group">
+                                <input class="form-control login-inp" type="text" value="昵称" name="admin" id="">
+                                <p class="none">格式错误</p>
+                                <input class="form-control login-inp" type="text" value="密码（8为以上字符，区分大小写）" name="password" id="">
+                                <p class="none">不能低于8位字符</p>
+                                <input class="form-control login-inp" type="text" value="86+（中国大陆）" name="phone" id="">
+                                <p class="none">手机号码格式错误</p>
+                                <div class="row login-inp">
+                                     <div class="col-md-7">
+                                            <input class="form-control" type="text" name="number" value="验证码" >
+                                            <p class="none">验证码错误</p>
+                                     </div>
+                                     <div class="col-md-1"></div>
+                                     <div class="col-md-4">
+                                         <button class="btn btn-success btn-block">获取验证码</button>
+                                     </div>
+                                </div>
+                                <div class="row" style="padding:30px 10px 0px 10px;">
+                                    <div class="col-md-12">
+                                        <h5 class="pull-right"><a href="#">用邮箱注册</a></h5>
+                                    </div>
+                                    <div class="col-md-12">
+                                            <button class="btn btn-default btn-block" type="submit">注册</button>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <h5 class="pull-right"><a href="#"  id="sumbit-dr">已有账号，直接登入</a></h5>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+$(function(){
+    $('[data-toggle="tooltip"').tooltip();
+    $('[data-toggle="popover"').popover();
+    $('#sumbit-zc').click(function(){
+        $('#myTab span:eq(2)').tab('show');
+    })
+    $('#sumbit-dr').click(function(){
+        $('#myTab span:eq(0)').tab('show');
+    })
+
+    $('input[name=admin]').blur(function(){
+            val = this.value;
+             if(val.length<6){
+                $(this).next().show();
+                a=0;
+             }else{
+                $(this).next().hide();
+                a=1;
+             }
+        })
+        $('input[name=password]').blur(function(){
+            val = this.value;
+            if(val.length<8){
+                $(this).next().show();
+                b=0;
+            }else{
+                $(this).next().hide();
+                b=1;
+            }
+        })
+        $('input[name=number]').blur(function(){
+            val = this.value;
+            if(val.length<8){
+                $(this).next().show();
+                c=0;
+            }else{
+                $(this).next().hide();
+                c=1;
+            }
+        })
+        $('form').submit(function(){
+              $('input[name=admin]').blur();
+              $('input[name=password').blur();
+              $('input[name=number]').blur();
+              if(a+b+c!=5){
+               return false;
+              }
+         })
+})
+ 
+</script>
+</html>

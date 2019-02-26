@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>【2K/60fps】这可能是我做过最美的miku了【boomclap布料解算版】</title>
+    <link rel="icon" href="../img/favicon.ico">  <!--icon矢量图标--> 
+    <link rel="stylesheet" href="../css/video.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+        <div class="row bg-header">
+                <div class="navbar navbar-bg navbar-inverse">
+                    <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".bs-js-navbar-scrollspy" >
+                                        <span class="sr-only">切换导航</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                </button>
+                        <a class="navbar-brand" href="../index.html"><img  style="display: inline-block;" src="../img/zhuzhan.ico" alt="">主站</a>
+                    </div>
+                    <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li><a href="login.html">画友</a></li>
+                            <li><a href="login.html">音频</a></li>
+                            <li><a href="login.html">游戏中心</a></li>
+                            <li><a href="login.html">会员购</a></li>
+                            <li><a href="login.html">直播</a></li>
+                            <li><a href="login.html">漫画</a></li>
+                            <li><a href="login.html">下载APP</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="admin" data-toggle="tooltip" data-placement="left" data-html="true" title="<p class='small'>登入后你可以:</p><img class='login-img' src='../img/login.png'>">
+                                <a href="#" data-toggle="popover" data-container="body" data-html="true" data-placement="bottom" title="
+                                <ul class='nav nav-tabs' id='myTab'>
+                                    <li class='active'><a herf='#' data-toggle='tab' data-target='#num'>账号密码登入</a></li>
+                                    <li><a herf='#' data-toggle='tab' data-target='#pho'>扫描二维码登入</a></li>
+                                </ul>
+                                <div class='tab-content' id='myTabContent'>
+                                    <div class='tab-pane active' id='num'>
+                                        <div class='form-group'>
+                                            <div class='form-inline inp'><label class='control-labrl'>账号:</label><input class='form-control' typt='text'/></div>
+                                            <div class='form-inline inp'><label class='control-labrl'>密码:</label><input class='form-control' type='password'/></div>
+                                            <p class='small pull-right'>是否<a herf=''>忘记密码？</a></p>
+                                            <button class='btn btn-success btn-block'>登入</button>
+                                            <p class='small pull-right' style='margin-top:30px;'>首次登入/没有账号？<a herf='login.com'>注册一个新账号</a></p>
+                                        </div>
+                                    </div>
+                                    <div class='tab-pane' id='pho'>
+                                        <p>扫描下方的二维码:</p>
+                                        <img class='center-block' style='width:240px;height:240px;' src='../img/two.png'>
+                                        <p class='small'>找不到手机？没有摄像头？尝试着动动脑子。</p>
+                                    </div>
+                                </div>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            </li>
+                            <li data-toggle="tooltip" data-placement="bottom" data-html="true" title="<p>上次浏览:</p><p><span class='btn-block'>目前暂无浏览记录</span></p>">
+                                <a href="">历史</a>
+                            </li>
+                            <li data-toggle="tooltip" data-placement="bottom" data-html="true" title="<p>您还没有登入</p>"><a href=""style="background-color:deeppink;border-radius: 0 0 5px 5px;">投稿</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <img style="position:absolute;top:60px;left:15%;" src="../img/nav-bg-1.png" alt="">
+                <div class="form-group pull-right gly">
+                    <div class="form-inline">
+                            <button class="btn btn-sm btn-default" style="color:rgb(245, 46, 145);display: inline-block;">
+                                <span class="glyphicon glyphicon-stats" style="color:rgb(245, 46, 145);"></span> 排行榜
+                            </button>
+                             <div class="input-group">
+                                <input class="form-control" type="text" value="改革春风吹满地" style="color:#ccc;">
+                                <span class="glyphicon glyphicon-search input-group-addon" style="top:0;border:none;"></span>
+                            </div>
+                    </div>
+                </div>
+         </div>
+        <div class="content">
+            <nav class="navbar" style="margin-bottom:0;">
+                    <ul class="nav navbar-nav" id="show">
+                            <li>
+                                <a href="index.html" style="padding-bottom: 10px;padding-top: 20px; color:black;">
+                                    <span class="glyphicon glyphicon-home" style="color:rgb(218, 119, 168);position: absolute;top:5px;left: 20px;"></span>首页
+                                </a>
+                            </li>
+                            <li>
+                               <a href="table.html" style="padding-bottom: 10px;padding-top: 20px; color:black;">
+                                   <span class="new">999+</span>动画
+                               </a>
+                                <ul class="dop-m">
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>MAD</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>MMD</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>配音</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>综合</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="table.html" style="padding-bottom: 10px;padding-top: 20px; color:black;">
+                                   <span class="new">566</span>番剧
+                               </a>
+                                <ul class="dop-m">
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>连载动画</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>完结动画</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>动画资讯</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>新番时间表</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>番剧索引</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>官方延申</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="table.html" style="padding-bottom: 10px;padding-top: 20px; color:black;">
+                                   <span class="new">654</span>国创
+                               </a>
+                                <ul class="dop-m">
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>国创动画</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>国创原创</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>资讯</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>新番时间表</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>番剧索引</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>官方延申</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="table.html" style="padding-bottom: 10px;padding-top: 20px; color:black;">
+                                   <span class="new">234</span>音乐
+                               </a>
+                                <ul class="dop-m">
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>原创</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>翻唱</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>MV</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>VOCALOID</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>电音</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>演奏</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>音乐现场</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="table.html" style="padding-bottom: 10px;padding-top: 20px; color:black;">
+                                   <span class="new">753</span>舞蹈
+                               </a>
+                                <ul class="dop-m">
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>宅舞</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>三次元舞蹈</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>舞蹈教程</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="table.html" style="padding-bottom: 10px;padding-top: 20px; color:black;">
+                                   <span class="new">243</span>游戏
+                               </a>
+                                <ul class="dop-m">
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>单机游戏</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>手机游戏</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>网络游戏</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>电子竞技</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>桌游棋牌</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>音游</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="table.html" style="padding-bottom: 10px;padding-top: 20px; color:black;">
+                                   <span class="new">345</span>科技
+                               </a>
+                                <ul class="dop-m">
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>趣味科普人文</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>野生技术协会</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>演讲.公开课</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>星海</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>机械</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="table.html" style="padding-bottom: 10px;padding-top: 20px; color:black;">
+                                   <span class="new">212</span>数码
+                               </a>
+                                <ul class="dop-m">
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>手机平板</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>电脑装机</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>摄像摄影</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>影音智能</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="table.html" style="padding-bottom: 10px;padding-top: 20px; color:black;">
+                                   <span class="new">999+</span>生活
+                               </a>
+                                <ul class="dop-m">
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>搞笑</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>日常</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>美食圈</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>动物圈</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>手工</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>绘画</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>运动</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="table.html" style="padding-bottom: 10px;padding-top: 20px; color:black;">
+                                   <span class="new">865</span>鬼畜
+                               </a>
+                                <ul class="dop-m">
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>鬼畜调教</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>音MAD</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>人工VOLAID</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>演示教程</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="table.html" style="padding-bottom: 10px;padding-top: 20px; color:black;">
+                                   <span class="new">432</span>时尚
+                               </a>
+                                <ul class="dop-m">
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>美妆</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>服饰</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>健身</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>T台</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>风尚标</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="table.html" style="padding-bottom: 10px;padding-top: 20px; color:black;">
+                                   <span class="new">332</span>广告
+                               </a>
+                           </li>
+                            <li>
+                                <a href="table.html" style="padding-bottom: 10px;padding-top: 20px; color:black;">
+                                   <span class="new">513</span>娱乐
+                               </a>
+                                <ul class="dop-m">
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>综艺</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>明星</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>甜甜圈</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="table.html" style="padding-bottom: 10px;padding-top: 20px; color:black;">
+                                   <span class="new">642</span>影视
+                               </a>
+                                <ul class="dop-m">
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>影视杂谈</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>影视剪辑</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>预告.资讯</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>短片</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>特摄</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="table.html" style="padding-bottom: 10px;padding-top: 20px; color:black;">
+                                   <span class="new">742</span>放映厅</a>
+                                <ul class="dop-m">
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>纪录片</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>电影</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-chevron-right"></span>电视剧</a></li>
+                                </ul>
+                            </li>
+                            <li><a href=""><span class="label label-success">专栏</span></a></li>
+                            <li><a href=""><span class="label label-danger">广场</span></a></li>
+                            <li><a href=""><span class="label label-info">直播</span></a></li>
+                            <li><a href=""><span class="label label-warning">小黑屋</span></a></li>
+                    </ul>
+            </nav>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-8" style="margin-top:20px;">
+                        <h4>【极限2K画质60fps】这可能是我做过最美的miku了【boomclap布料解算版】</h4>
+                        <p class="small video-span"><span class="">主页/游戏/竞技</span> <span>2019.2.14&nbsp;13:39:12</span> <span><a href="#">稿件投诉</a></span></p>
+                        <p class="small video-span"> <span>116.5万播放量</span><span >2134条弹幕</span><span>最高全站排行榜第一名</span></p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-4">
+                            <img class="video-img" src="../img/fj10.jpg" alt="">
+                        </div>
+                        <div class="col-md-8">
+                            <p class="video-p">
+                                <a href="#" class="col-md-8 pull-left" style="font-size: 18px;">lieP9</a>
+                                <span class="glyphicon glyphicon-envelope" style="color:rgb(170, 168, 168);"></span>
+                                <a href="#" style="color: dimgrey;">发消息</a>  
+                            </p>
+                            <p>lieP9，人称烈酒啤，好了没了，我来补充下，此人极其牛批。</p>
+                            <p><button class="btn btn-danger col-md-4 pull-left">充电</button><button class="btn btn-info col-md-6 pull-right">+关注</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+               <div class="col-md-9">
+                   <video class="video" src="../img/video/【极限2K画质60fps】这可能是我做过最美的miku了【boomclap布料解算版】 - 2.2K版(Av20827366,P2).mp4" autobuffer controls autoplay preload>
+                   </video>
+                   <div class="row" style="margin-left: 10px;">
+                       <p class="row-span">
+                           <span class="span-size"> <span class="glyphicon glyphicon-thumbs-up" style="color:rgb(139, 136, 136);"></span>15.7万</span>
+                           <span class="span-size"> <span class="glyphicon glyphicon-comment"  style="color:rgb(100, 99, 99);"></span>5.6万</span>
+                           <span class="span-size"> <span class="glyphicon glyphicon-heart" style="color:rgb(81, 135, 235);"></span>11.2万</span>
+                           <span class="span-size"><span class="glyphicon glyphicon-share-alt"></span>分享</span>
+                       </p>
+                       <p class="row-span">  简介: 由于制作的动画项目完结了，所以有时间来继续制作miku视频。<br>
+                            这一次重置了之前的作品《初音-BoomClap》添加了布料、修改一部分动作穿模、提高了分辨率和帧率、<br> 
+                            支持了表情。虽然看上去跟之前的差不多，但是基本是从头重做。上次有人批评腿太长，我也深以为意，<br> 
+                            所以重新修改模型身体比例（把腿缩短），另外添加顶点形变、修改穿模、解算布料。<br> 
+                            。。这些耗费的精力是之前作品的4,5倍。<br>
+                            之后我会在专栏里记录一下这次制作的经验。主要是关于修正穿模相关的。（ps：虽然修正了很多穿模，<br> 
+                            但是暂停找还是有的，<br> 
+                            个人精力实在有限）这次渲染2k/60fps的视频，渲染量比720p/24帧的视频大了8倍，<br> 
+                            电脑连续跑了好几天。<br>
+                            希望大家喜欢吧，这一套流程过于繁琐，而且国内顶尖的动作数据也是屈指可数，这种视频可以算是做<br> 
+                            一个少一个吧。以后制作舞蹈视频，基本上会以【布料+1080p+60fps】为标配制作<br>
+                            视频类型: 舞蹈MMD<br>
+                            相关题材: miku<br>
+                            动作来源: CY<br>
+                             编舞：1M - May J Lee<br>
+                            模型来源: TdaWYKPSEGA金子卵黄iRon0129大狗头<br>
+                            镜头来源: 永远赤红的幼月<br>
+                            场景来源: lieP9<br>
+                            使用软件: MMD/PE/mmdBridge/maya/Marvelous Designer/redshift<br>
+                             BGM【音乐名】: BoomClap
+                      </p>
+                   </div>
+               </div>
+               <div class="col-md-3">
+                   <div class="col-md-12 list-group" style="margin-top: 20px;">
+                       <a href="#" class="list-group-item" style="background-color: rgb(236, 233, 233);">
+                           <span>视频列表</span><span class="glyphicon glyphicon-list pull-right"></span>
+                       </a>
+                       <ul>
+                           <li class="list-group-item"><a href="#">p1</a></li>
+                           <li class="list-group-item"><a href="#">p2</a></li>
+                       </ul>
+                   </div>
+                   <div class="col-md-12">
+                       <h4>相关视频推荐</h4>
+                       <div class="row video-tab">
+                           <div class="col-md-6" style="padding: 0px; ">
+                               <img class="row-img" src="../img/xc1.jpg" alt="">
+                           </div>
+                           <div class="col-md-6" style="padding: 0px 5px; ">
+                               <h5 style="margin-bottom: 0px;">亚琪娜【极乐净土】次世代卡通渲染</h5>
+                               <span class="small">scylax</span>
+                               <p style="margin-bottom: 0px;"><span class="small">123.5万播放</span><span class="small">3244条弹幕</span></p>
+                            </div>
+                       </div>
+                       <div class="row video-tab">
+                            <div class="col-md-6" style="padding: 0px; ">
+                                <img class="row-img" src="../img/xc2.jpg" alt="">
+                            </div>
+                            <div class="col-md-6" style="padding: 0px 5px; ">
+                                <h5 style="margin-bottom: 0px;">亚琪娜【极乐净土】次世代卡通渲染</h5>
+                                <span class="small">scylax</span>
+                                <p style="margin-bottom: 0px;"><span class="small">123.5万播放</span><span class="small">3244条弹幕</span></p>
+                            </div>
+                        </div>
+                        <div class="row video-tab">
+                                <div class="col-md-6" style="padding: 0px; ">
+                                    <img class="row-img" src="../img/xc3.jpg" alt="">
+                                </div>
+                                <div class="col-md-6" style="padding: 0px 5px; ">
+                                    <h5 style="margin-bottom: 0px;">亚琪娜【极乐净土】次世代卡通渲染</h5>
+                                    <span class="small">scylax</span>
+                                    <p style="margin-bottom: 0px;"><span class="small">123.5万播放</span><span class="small">3244条弹幕</span></p>
+                                </div>
+                        </div>
+                        <div class="row video-tab">
+                                <div class="col-md-6" style="padding: 0px; ">
+                                    <img class="row-img" src="../img/xc4.jpg" alt="">
+                                </div>
+                                <div class="col-md-6" style="padding: 0px 5px; ">
+                                    <h5 style="margin-bottom: 0px;">亚琪娜【极乐净土】次世代卡通渲染</h5>
+                                    <span class="small">scylax</span>
+                                    <p style="margin-bottom: 0px;"><span class="small">123.5万播放</span><span class="small">3244条弹幕</span></p>
+                                </div>
+                       </div>
+                       <div class="row video-tab">
+                            <div class="col-md-6" style="padding: 0px; ">
+                                <img class="row-img" src="../img/xc5.png" alt="">
+                            </div>
+                            <div class="col-md-6" style="padding: 0px 5px; ">
+                                <h5 style="margin-bottom: 0px;">亚琪娜【极乐净土】次世代卡通渲染</h5>
+                                <span class="small">scylax</span>
+                                <p style="margin-bottom: 0px;"><span class="small">123.5万播放</span><span class="small">3244条弹幕</span></p>
+                            </div>
+                        </div>
+                        <div class="row video-tab">
+                                <div class="col-md-6" style="padding: 0px; ">
+                                    <img class="row-img" src="../img/xc6.jpg" alt="">
+                                </div>
+                                <div class="col-md-6" style="padding: 0px 5px; ">
+                                    <h5 style="margin-bottom: 0px;">亚琪娜【极乐净土】次世代卡通渲染</h5>
+                                    <span class="small">scylax</span>
+                                    <p style="margin-bottom: 0px;"><span class="small">123.5万播放</span><span class="small">3244条弹幕</span></p>
+                                </div>
+                        </div>
+                        <div class="row video-tab">
+                           <div class="col-md-6" style="padding: 0px; ">
+                               <img class="row-img" src="../img/xc1.jpg" alt="">
+                           </div>
+                           <div class="col-md-6" style="padding: 0px 5px; ">
+                               <h5 style="margin-bottom: 0px;">亚琪娜【极乐净土】次世代卡通渲染</h5>
+                               <span class="small">scylax</span>
+                               <p style="margin-bottom: 0px;"><span class="small">123.5万播放</span><span class="small">3244条弹幕</span></p>
+                            </div>
+                       </div>
+                       <div class="row video-tab">
+                            <div class="col-md-6" style="padding: 0px; ">
+                                <img class="row-img" src="../img/xc2.jpg" alt="">
+                            </div>
+                            <div class="col-md-6" style="padding: 0px 5px; ">
+                                <h5 style="margin-bottom: 0px;">亚琪娜【极乐净土】次世代卡通渲染</h5>
+                                <span class="small">scylax</span>
+                                <p style="margin-bottom: 0px;"><span class="small">123.5万播放</span><span class="small">3244条弹幕</span></p>
+                            </div>
+                        </div>
+                   </div>
+               </div>
+            </div>
+            <div class="row" style="padding-top: 50px;">
+                    <p class="text-center">关于我们:https://github.com/WylCat</p>
+                    <p class="text-center">排行榜TOP10,想看的可以前往小破站（以上并没有实际的视频内容，只做参考）</p>
+            </div>
+        </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+    $(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="popover"').popover();
+        // 将所有添加了弹出框的APi初始化
+        $('#show>li').hover(function(){
+            $(this).find(".dop-m").show();
+        },function(){
+            $(this).find(".dop-m").hide();
+        });
+        $('.dop-m>li').hover(function(){
+            $(this).css('background-color','skyblue').find("span").show();
+        },function(){
+            $(this).css('background-color','').find("span").hide();
+        });
+        
+    //    toggle
+        $.fn.toggle = function( fn, fn2 ) {
+            var args = arguments,guid = fn.guid || $.guid++,i=0,
+            toggle = function( event ) {
+            var lastToggle = ( $._data( this, "lastToggle" + fn.guid ) || 0 ) % i;
+            $._data( this, "lastToggle" + fn.guid, lastToggle + 1 );
+            event.preventDefault();
+            return args[ lastToggle ].apply( this, arguments ) || false;
+            };
+            toggle.guid = guid;
+            while ( i < args.length ) {
+            args[ i++ ].guid = guid;
+            }
+            return this.click( toggle );
+        };
+    })
+</script>

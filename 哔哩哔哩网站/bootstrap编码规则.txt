@@ -1,0 +1,18 @@
+﻿
+<!DOCTYPE html>
+    <!-- html5 文档语法规则 -->
+
+<html lang="en">
+    <!-- lang="en"  采用那种语言解析/翻译（en英文/zh-CN中文） -->
+
+<meta charset="UTF-8"> 
+    <!-- 采用UTF-8的字符编码规范 -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 让ie更好的兼容 -->
+
+ //!--HTML属性书写顺序：class-----id/name----data-Api-----src/for/type/href----title/alt---role/aria-*
+
+ //各自的命名空间！
